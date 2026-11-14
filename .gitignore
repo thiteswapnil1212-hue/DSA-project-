@@ -7,6 +7,7 @@ module_tests
 module_tests.exe
 location_tests
 location_tests.exe
+*.exe
 
 # Compiler object files
 *.o
