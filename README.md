@@ -57,6 +57,19 @@ With an adjacency matrix, BFS takes **O(V²)** time and **O(V)** additional spac
 
 An empty graph is reported as not connected. A graph with one location is connected.
 
+## Architecture
+
+```mermaid
+flowchart LR
+    User([User]) --> Main["main.c<br/>menu · input · coordination"]
+    Main --> Loc["locations.c<br/>singly linked list"]
+    Main --> Graph["graph.c<br/>adjacency matrix · 100 vertices"]
+    Graph --> Dijk["Dijkstra<br/>shortest route"]
+    Graph --> BFS["BFS<br/>reachability"]
+    BFS --> Queue["queue.c<br/>circular queue"]
+    Main --> Test["test_driver.c<br/>module tests"]
+```
+
 ## Project files
 
 ```text
